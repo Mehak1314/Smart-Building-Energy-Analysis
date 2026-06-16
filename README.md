@@ -52,12 +52,10 @@ The competition was designed to develop accurate models for predicting building 
 
 ## 🛠️ Tech Stack
 
-* SQL / MySQL
 * Python
 * Pandas
 * NumPy
 * Matplotlib
-* Power BI / Tableau (if applicable)
 
 ---
 
