@@ -1,172 +1,191 @@
-# 🏢 Smart Building Energy Analysis
+# 🏢 Smart Building Energy Analysis using PCA & K-Means
 
-A data analytics project focused on understanding and optimizing building energy consumption using real-world smart building data from the ASHRAE Great Energy Predictor III dataset.
-
-## 📌 Overview
-
-Energy efficiency has become a critical aspect of sustainable building management. This project analyzes large-scale building energy consumption data to uncover usage patterns, identify inefficiencies, and provide insights that support smarter energy management decisions.
-
-Using historical meter readings, building metadata, and weather information, the project explores how different factors influence energy consumption across commercial buildings.
+A data analytics and unsupervised machine learning project that explores smart building energy consumption using the ASHRAE Great Energy Predictor III dataset. The project applies data preprocessing, dimensionality reduction (PCA), and clustering (K-Means) to identify patterns in building energy usage and understand similarities between buildings.
 
 ---
 
-## 📊 Dataset
+# 📌 Project Overview
 
-This project uses the **ASHRAE Great Energy Predictor III** dataset from Kaggle.
+Modern smart buildings generate massive amounts of energy consumption data. Understanding this data helps improve energy efficiency, reduce operational costs, and support sustainable building management.
 
-**Dataset Source:**
-
-🔗 https://www.kaggle.com/c/ashrae-energy-prediction
-
-The dataset contains:
-
-* Energy meter readings from over 1,400 buildings
-* Building metadata (size, primary use, construction year, etc.)
-* Weather information from multiple locations
-* Multiple meter types:
-
-  * Electricity
-  * Chilled Water
-  * Steam
-  * Hot Water
-
-The competition was designed to develop accurate models for predicting building energy consumption and improving energy efficiency analysis.
+In this project, historical building energy data is analyzed to discover hidden patterns rather than predict future values. Using Principal Component Analysis (PCA) and K-Means Clustering, buildings with similar energy consumption characteristics are grouped together for better analysis.
 
 ---
 
-## 🚀 Features
+# 📊 Dataset
 
-✅ Building energy consumption analysis
+This project uses the **ASHRAE Great Energy Predictor III** dataset available on Kaggle.
 
-✅ Energy usage trend identification
+**Dataset Source**
 
-✅ Peak consumption analysis
+https://www.kaggle.com/c/ashrae-energy-prediction
 
-✅ Building performance comparison
+The dataset includes:
 
-✅ Weather impact assessment
-
-✅ Data visualization and reporting
-
----
-
-## 🛠️ Tech Stack
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
+- Energy meter readings from 1,400+ commercial buildings
+- Building metadata
+- Weather information
+- Multiple energy meter types:
+  - Electricity
+  - Chilled Water
+  - Steam
+  - Hot Water
 
 ---
 
-## 📂 Project Structure
+# 🎯 Objectives
 
-```text
-Smart-Building-Energy-Analysis/
-│
-├── Dataset/
-├── SQL Queries/
-├── Analysis/
-├── Visualizations/
-├── Reports/
-├── README.md
-```
+- Clean and preprocess large-scale energy data.
+- Reduce dataset complexity using PCA.
+- Identify groups of similar buildings using K-Means Clustering.
+- Explore energy consumption patterns.
+- Visualize relationships within the dataset.
+- Generate insights for energy-efficient building management.
 
 ---
 
-## 📈 Analysis Performed
+# 🛠 Tech Stack
 
-### Energy Consumption Analysis
-
-* Total energy usage by building
-* Consumption trends over time
-* Meter-type analysis
-
-### Building Performance Analysis
-
-* High-consumption buildings
-* Energy intensity comparison
-* Building category performance
-
-### Weather Correlation Analysis
-
-* Temperature vs energy consumption
-* Seasonal energy demand trends
-* Climate impact assessment
-
-### Sustainability Insights
-
-* Potential energy-saving opportunities
-* Efficiency improvement recommendations
-* Resource optimization analysis
+- Python
+- Jupyter Notebook
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn (Machine Learning)
+- PCA (Principal Component Analysis)
+- K-Means Clustering
 
 ---
 
-## 🎯 Objectives
+# 📚 Machine Learning Concepts Used
 
-* Analyze building energy usage patterns.
-* Identify peak energy consumption periods.
-* Compare energy efficiency across buildings.
-* Explore weather-related impacts on energy demand.
-* Generate insights for sustainable building operations.
+## 🔹 Principal Component Analysis (PCA)
+
+Principal Component Analysis (PCA) is a dimensionality reduction technique.
+
+Large datasets often contain many features, making visualization and analysis difficult. PCA transforms the original features into a smaller set of new variables called **Principal Components**, while preserving most of the important information.
+
+### Why PCA?
+
+- Reduces dimensionality
+- Removes redundant information
+- Speeds up machine learning algorithms
+- Helps visualize high-dimensional data in 2D or 3D
+
+Example:
+
+Instead of analyzing 20 different building features separately, PCA can summarize them into just 2 or 3 principal components while retaining most of the dataset's variance.
 
 ---
 
-## 📊 Key Insights
+## 🔹 K-Means Clustering
 
-The project helps answer questions such as:
+K-Means is an **unsupervised machine learning algorithm** used to group similar data points.
 
-* Which buildings consume the most energy?
-* How does weather affect energy usage?
-* What are the peak demand periods?
-* Which building categories are the least efficient?
-* Where can energy-saving measures be implemented?
+It divides the dataset into **K clusters**, where each cluster contains buildings with similar characteristics.
+
+### How K-Means Works
+
+1. Choose the number of clusters (K).
+2. Randomly initialize cluster centers.
+3. Assign each data point to its nearest cluster.
+4. Update cluster centers.
+5. Repeat until the clusters no longer change significantly.
+
+### Why K-Means?
+
+- Finds hidden patterns in data
+- Groups similar buildings together
+- Helps identify high-energy and low-energy consumption clusters
+- Useful for segmentation and exploratory data analysis
 
 ---
 
-## ▶️ Getting Started
+# 📈 Project Workflow
 
-### Clone Repository
+1. Data Loading
+2. Data Cleaning
+3. Feature Selection
+4. Data Standardization
+5. Principal Component Analysis (PCA)
+6. K-Means Clustering
+7. Cluster Visualization
+8. Result Interpretation
+
+---
+
+# 📊 Analysis Performed
+
+- Data preprocessing
+- Feature scaling
+- PCA transformation
+- Cluster formation using K-Means
+- Visualization of clusters
+- Building energy pattern analysis
+
+---
+
+# ▶️ Getting Started
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/Mehak1314/Smart-Building-Energy-Analysis.git
 cd Smart-Building-Energy-Analysis
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install pandas numpy matplotlib scikit-learn
 ```
 
-### Run Analysis
+## Run the Notebook
 
-Execute the notebooks or SQL scripts included in the repository to generate reports and visualizations.
+Open:
 
----
+```
+ai_project.ipynb
+```
 
-## 🔮 Future Improvements
-
-* Machine Learning-based energy forecasting
-* Real-time dashboard integration
-* IoT sensor data support
-* Anomaly detection system
-* Energy consumption prediction models
+Run all cells to reproduce the complete analysis.
 
 ---
 
-## 📜 License
+# 📂 Repository Structure
+
+```
+Smart-Building-Energy-Analysis/
+│
+├── ai_project.ipynb
+├── README.md
+```
+
+---
+
+# 🚀 Future Improvements
+
+- Hierarchical Clustering
+- DBSCAN Clustering
+- Energy Consumption Forecasting
+- Interactive Dashboard using Power BI or Tableau
+- Real-time IoT Data Integration
+- Anomaly Detection for Energy Monitoring
+
+---
+
+# 📜 License
 
 This project is intended for educational and academic purposes.
 
 ---
 
-## 👩‍💻 Author
+# 👩‍💻 Author
 
-**Mehak**
+**Mehak Garg**
 
 GitHub: https://github.com/Mehak1314
 
 ---
 
-⭐ If you found this project useful, please consider giving it a star!
+⭐ If you found this project useful, consider giving it a star!
